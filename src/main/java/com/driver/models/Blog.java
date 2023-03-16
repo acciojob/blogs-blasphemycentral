@@ -19,19 +19,19 @@ public class Blog
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    private int id;
 
-    String title;
+    private String title;
 
-    String content;
+    private String content;
 
     @CreationTimestamp
-    Date pubDate;
+    private Date pubDate;
 
     @ManyToOne
     @JoinColumn
-    User user;
+    private User user;
 
     @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL)
-    List<Image> imageList = new ArrayList<>();
+    private List<Image> imageList = new ArrayList<>();
 }
