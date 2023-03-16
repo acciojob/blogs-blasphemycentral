@@ -38,8 +38,8 @@ public class BlogService {
     public void deleteBlog(int blogId)
     {
         //delete blog and corresponding images
-        Blog blog = blogRepository1.findById(blogId).get();
-        blog.setImageList(null);
-        blogRepository1.delete(blog);
+//        Blog blog = blogRepository1.findById(blogId).get();
+//        blog.setImageList(null);
+        blogRepository1.deleteById(blogId);
     }
 }
