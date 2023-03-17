@@ -25,9 +25,9 @@ public class User
 
     String password;
 
-    String firstname;
+    String firstname = "test";
 
-    String lastname;
+    String lastname = "test";
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     List<Blog> blogList = new ArrayList<>();
